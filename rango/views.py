@@ -4,11 +4,11 @@ from django.http import HttpResponse
 def index(request):
 	return HttpResponse("""
 		Rango says hey there partner! <br> <br>
-		<a href="{% url 'rango:about' %}" > About </a>
-		""")
+		<a href="/rango/about/"> About </a>
+		""") #{% url 'rango:about' %} ??
 
 def about(request):
 	return HttpResponse("""
 		Rango says here is the about page. <br> <br>
-		<a href="{% url 'rango:index' %}" > Index </a>
+		<a href="/rango/"> Index </a>
 		""")
